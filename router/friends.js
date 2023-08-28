@@ -18,10 +18,9 @@ router.get("/",(req,res)=>{
 // GET by specific ID request: Retrieve a single friend with email ID
 router.get("/:email",(req,res)=>{
   const email = req.params.email;
-  let friend_email = friends.filter((friend) => friend.email===email);
-  res.send(friend_email);
-  //or:
-  //res.send(friends[email]);
+  //let friend_email = friends.filter((friend) => friend.email===email);
+  //res.send(friend_email);
+  res.send(friends[email]);
 });
 
 

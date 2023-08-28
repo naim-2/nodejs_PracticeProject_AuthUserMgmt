@@ -66,11 +66,10 @@ router.put("/:email", function (req, res) {
 // DELETE request: Delete a friend by email id
 router.delete("/:email", (req, res) => {
   const email = req.params.email;
-  friends = friends.filter((friend) => friend.email != email);
-//or:
-//   if (email){
-//     delete friends[email]
-//   }
+  //friends = friends.filter((friend) => friend.email != email);
+   if (email){
+     delete friends[email]
+   }
     res.send(`Friend with the email  ${email} deleted.`);
 });
 
